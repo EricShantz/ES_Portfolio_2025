@@ -6,18 +6,14 @@
 # next.js
 /.next/
 /out/
+dist/
+
 
 # production
 /build
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files
-.env*
+*.log
 
 # vercel
 .vercel
@@ -25,3 +21,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local env files
+.env*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
