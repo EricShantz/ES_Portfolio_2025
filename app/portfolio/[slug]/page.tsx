@@ -350,3 +350,9 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
     </div>
   )
 }
+
+export async function generateStaticParams() {
+  return Object.keys(projects).map((slug) => ({
+    slug,
+  }))
+}

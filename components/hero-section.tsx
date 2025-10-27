@@ -18,12 +18,13 @@ export function HeroSection() {
                 Learning Technology Lead
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground text-pretty">
-                I build and manage innovative learning platforms that scale.
+                I build and manage learning platforms that scale.
+                {/* I lead the development and optimization of a scalable learning platform that supports strategic growth and innovation. */}
               </p>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed text-pretty max-w-xl">
-              Specializing in LMS administration, systems integration, e-learning development, and platform innovation.
+              Specializing in LMS administration, systems integration, platform automation, and e-learning development.
               Transforming learning experiences through technology and data-driven insights.
             </p>
 
@@ -45,9 +46,9 @@ export function HeroSection() {
             <div className="relative w-full max-w-md aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl" />
               <img
-                src="/professional-headshot.png"
+                src="/ESHS.png"
                 alt="Professional portrait"
-                className="relative w-full h-full object-cover rounded-2xl shadow-2xl"
+                className="relative w-full h-full object-cover rounded-2xl shadow-2xl object-[43%_0%]"
               />
             </div>
           </div>

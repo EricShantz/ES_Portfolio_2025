@@ -32,7 +32,7 @@ export function AnimatedBackground() {
       isWord: boolean
     }> = []
 
-    const codeSymbols = ["{ }", "[ ]", "=>", "===", "&&", "fn", "let", "//", "$", "#"]
+    const codeSymbols = ["{ }", "[ ]"]
 
     const keywords = [
       "innovation",
@@ -43,7 +43,7 @@ export function AnimatedBackground() {
       "data-driven",
       "engagement",
       "excellence",
-      "transform",
+      "transformation",
       "optimize",
     ]
 
