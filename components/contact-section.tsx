@@ -67,7 +67,7 @@ export function ContactSection() {
                       </div>
                     </a>
                     <a
-                      href="www.linkedin.com/in/eric-shantz"
+                      href="https://www.linkedin.com/in/eric-shantz/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
