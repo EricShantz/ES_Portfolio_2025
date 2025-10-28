@@ -338,7 +338,8 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <div className="relative aspect-video overflow-hidden rounded-lg shadow-2xl">
-            <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
+            <img src={`/ES_Portfolio_2025/${project.image}` || "/ES_Portfolio_2025/placeholder.svg"}
+              alt={project.title} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
