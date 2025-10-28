@@ -10,7 +10,7 @@ export function SidebarProfile() {
     <Card className="p-6 space-y-6">
       {/* Profile Image */}
       <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-        <img src="/professional-headshot.png" alt="Professional portrait" className="w-full h-full object-cover" />
+        <img src="/ES_Portfolio_2025/ESHSt.png" alt="Eric Shantz" className="w-full h-full object-cover" />
       </div>
 
       {/* Name & Title */}

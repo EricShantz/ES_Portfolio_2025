@@ -66,7 +66,7 @@ export function BlogSection() {
                   <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
                     <div className="relative aspect-video overflow-hidden bg-muted">
                       <img
-                        src={post.image || "/placeholder.svg"}
+                        src={`/ES_Portfolio_2025/${post.image}` || "/ES_Portfolio_2025/placeholder.svg"}
                         alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />

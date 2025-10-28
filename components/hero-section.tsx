@@ -47,7 +47,7 @@ export function HeroSection() {
             <div className="relative w-full max-w-md aspect-square">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl" />
               <img
-                src="/ESHS.png"
+                src={`/ES_Portfolio_2025/ESHS.png`}
                 alt="Professional portrait"
                 className="relative w-full h-full object-cover rounded-2xl shadow-2xl object-[43%_0%]"
               />
