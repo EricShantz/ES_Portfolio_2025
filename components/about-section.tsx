@@ -34,7 +34,7 @@ export function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I’m a Learning Technology professional with expertise in building and managing scalable learning platforms that deliver measurable results.
+                  I’m a Learning Technology professional with expertise in building and managing scalable learning platforms.
                   My work sits at the intersection of instructional design, technical implementation, and strategic problem-solving.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -44,7 +44,7 @@ export function AboutSection() {
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I design learning environments that are engaging, effective, and built to scale.
-                  From developing interactive programs and AI-based tools to producing marketing content and maintaining course libraries,
+                  From developing interactive programs and AI-based tools to  product marketing and course development,
                   I combine technical skill with a strong focus on how people actually learn.
                 </p>
               </div>

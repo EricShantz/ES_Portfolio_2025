@@ -8,32 +8,35 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 export function BlogSection() {
   const posts = [
     {
-      title: "The Future of AI in Learning Technology",
+      title: "LMS In 2025: Top Trends Transforming The Future Of Education",
       excerpt:
-        "Exploring how artificial intelligence is transforming the learning experience and what it means for L&D professionals.",
-      date: "March 15, 2024",
-      readTime: "5 min read",
-      category: "AI & Innovation",
-      image: "/ai-learning.png",
+        "The educational landscape is undergoing a revolutionary transformation, fueled by rapid technological advancements. As we approach 2026, Learning Management Systems (LMSs) are positioned to become the backbone of modern education, reshaping how content is delivered, monitored, and interacted with.",
+      date: " August 18, 2025",
+      readTime: "4 min read",
+      category: "LMS",
+      image: "/lms-in-2025.jpg",
+      link: "https://elearningindustry.com/lms-top-trends-transforming-the-future-of-education"
     },
     {
-      title: "Building Scalable LMS Integrations with Boomi",
+      title: "Future of eLearning: 2025 Trends That Actually Matter to L&D Leaders",
       excerpt:
-        "A practical guide to designing and implementing robust system integrations for enterprise learning platforms.",
-      date: "March 8, 2024",
-      readTime: "8 min read",
-      category: "Integration",
-      image: "/system-integration-architecture.jpg",
-    },
-    {
-      title: "Measuring Learning Impact: Beyond Completion Rates",
-      excerpt:
-        "How to use analytics and data-driven insights to demonstrate the true business value of learning programs.",
-      date: "February 28, 2024",
+        "As we look toward 2026 and beyond, what really matters for L&D leaders is not the volume of new tools, but the value they add—measured by performance, retention, and ROI.",
+      date: "September 9, 2025",
       readTime: "6 min read",
-      category: "Analytics",
-      image: "/data-analytics-dashboard.png",
+      category: "E-Learning",
+      image: "/future-of-elearning.png",
+      link: "https://elmlearning.com/blog/future-of-elearning/"
     },
+    {
+      title: "How agentic AI can drive workforce transformation",
+      excerpt:
+        "EdTech enterprises are creating a skill-oriented economy by promoting targeted learning and facilitating lifelong learning for employees. The integration of agentic AI into existing platforms maximizes career-focused vocational qualifications, as well as workforce learning and development programmes and establishes a new social contract in talent development.",
+      date: "May 9, 2025",
+      readTime: "8 min read",
+      category: "AI in EdTech",
+      image: "/ed-tech.png",
+      link: "https://www.weforum.org/stories/2025/05/see-why-edtech-needs-agentic-ai-for-workforce-transformation/"
+    }
   ]
 
   return (
@@ -49,50 +52,52 @@ export function BlogSection() {
                   Thoughts on learning technology, platform innovation, and industry trends.
                 </p>
               </div>
-              <Button variant="outline" asChild>
+              {/* <Button variant="outline" asChild>
                 <Link href="#blog">
                   View All Posts
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {posts.map((post, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
-                  <div className="relative aspect-video overflow-hidden bg-muted">
-                    <img
-                      src={post.image || "/placeholder.svg"}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <CardHeader>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        <span>{post.readTime}</span>
-                      </div>
+                <Link key={index} href={`${post.link}`} target="_blank" className="block h-full">
+                  <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div className="relative aspect-video overflow-hidden bg-muted">
+                      <img
+                        src={post.image || "/placeholder.svg"}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
-                    <Badge variant="secondary" className="w-fit mb-2">
-                      {post.category}
-                    </Badge>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
-                      {post.title}
-                    </CardTitle>
-                    <CardDescription className="line-clamp-3">{post.excerpt}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="ghost" className="group/btn p-0 h-auto">
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
+                          <span>{post.date}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                      <Badge variant="secondary" className="w-fit mb-2">
+                        {post.category}
+                      </Badge>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </CardTitle>
+                      <CardDescription className="line-clamp-3">{post.excerpt}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Button variant="ghost" className="group/btn p-0 h-auto">
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

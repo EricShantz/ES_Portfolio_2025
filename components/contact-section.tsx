@@ -41,7 +41,7 @@ export function ContactSection() {
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Get in Touch</h2>
               <div className="h-1 w-20 bg-primary rounded-full mx-auto" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Interested in collaborating or learning more about my work? Let's connect.
+                Interested in learning more about my work? Let's connect.
               </p>
             </div>
 
@@ -55,7 +55,7 @@ export function ContactSection() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <a
-                      href="mailto:contact@example.com"
+                      href="mailto:shantz.eric@gmail.com"
                       className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -63,11 +63,11 @@ export function ContactSection() {
                       </div>
                       <div>
                         <div className="text-sm font-medium text-foreground">Email</div>
-                        <div className="text-sm">contact@example.com</div>
+                        <div className="text-sm">shantz.eric@gmail.com</div>
                       </div>
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="www.linkedin.com/in/eric-shantz"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"

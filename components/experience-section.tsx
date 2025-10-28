@@ -1,3 +1,5 @@
+//Currently not being displayed, commented out in page.tsx
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Briefcase, Calendar } from "lucide-react"

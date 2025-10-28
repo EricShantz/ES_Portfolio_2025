@@ -18,8 +18,9 @@ export function HeroSection() {
                 Learning Technology Lead
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground text-pretty">
-                I build and manage learning platforms that scale.
+                {/* I build and manage learning platforms that scale. */}
                 {/* I lead the development and optimization of a scalable learning platform that supports strategic growth and innovation. */}
+                Eric Shantz
               </p>
             </div>
 
