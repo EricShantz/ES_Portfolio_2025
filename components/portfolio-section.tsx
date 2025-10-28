@@ -64,7 +64,7 @@ export function PortfolioSection() {
       title: "LMS Redesign & Custom Dashboards",
       description:
         "Redesigned LMS interface with custom-coded landing pages and dashboards to improve user experience and branding.",
-      image: "/SoAc-landing-page.png",
+      image: "/SoAc-landing-page.PNG",
       outcomes: [
         "Improved navigation",
         "Stronger brand presence",
@@ -77,7 +77,7 @@ export function PortfolioSection() {
       title: "Academy Marketing Strategy & Content",
       description:
         "Created marketing campaigns/content, video assets, and social media strategies to promote the Solace Academy brand.",
-      image: "/2025-feature-update-linkedin.png",
+      image: "/2025-feature-update-linkedin.PNG",
       outcomes: [
         "Improved platform engagement",
         "Enhanced brand visibility",
@@ -90,7 +90,7 @@ export function PortfolioSection() {
       title: "Ask Solly AI",
       description:
         "Designed and implemented a custom interface and analytics for an AI-powered learning assistant, embedding it within the Academy platform to deliver real-time answers and content recommendations.",
-      image: "/ask-solly.png",
+      image: "/ask-solly.PNG",
       outcomes: [
         "Increased learner engagement",
         "Reduced support queries",
@@ -103,7 +103,7 @@ export function PortfolioSection() {
       title: "Topic Hierarchy Explainer Site",
       description:
         "Created a simple standalone website to help users understand Solace’s topic hierarchy model.",
-      image: "/topic-tester.png",
+      image: "/topic-tester.PNG",
       outcomes: [
         "Improved user understanding",
         "Reduced support questions",
@@ -116,7 +116,7 @@ export function PortfolioSection() {
       title: "SSL Certificate Health Check Automation",
       description:
         "Automated monitoring for LMS SSL certificates, reducing downtime risks and manual oversight.",
-      image: "/ssl-check.png",
+      image: "/SSL-check.png",
       outcomes: [
         "Increased platform reliability",
         "Reduced manual effort",
@@ -129,7 +129,7 @@ export function PortfolioSection() {
       title: "ERP-Integrated Workshop Enrollment",
       description:
         "Built an automated workflow that enrolls users in LMS sessions upon ERP workshop registration.",
-      image: "/ERP-registration.png",
+      image: "/ERP-registration.PNG",
       outcomes: [
         "Eliminated the need manual enrollment",
         "Fewer user errors",
@@ -142,7 +142,7 @@ export function PortfolioSection() {
       title: "Badge & Certificate Design",
       description:
         "Redesigned the Academy’s badges and certificates with a modern, professional look.",
-      image: "/New_badge.png",
+      image: "/New_Badge.png",
       outcomes: [
         "Improved visual consistency",
         "Enhanced learner recognition",
@@ -155,7 +155,7 @@ export function PortfolioSection() {
       title: "Accredible Integration",
       description:
         "Onboarded and automated a digital badge platform (Accredible) to issue credentials at scale.",
-      image: "/accredible-home-page.png",
+      image: "/accredible-home-page.PNG",
       outcomes: [
         "Automated credential delivery",
         "Improved badge management",
