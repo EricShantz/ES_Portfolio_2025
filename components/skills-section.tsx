@@ -3,62 +3,148 @@ import { Database, Workflow, GraduationCap, Sparkles, Users, BarChart } from "lu
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function SkillsSection() {
+  // const skillCategories = [
+  //   {
+  //     icon: Database,
+  //     title: "LMS Administration",
+  //     skills: [
+  //       "Docebo Platform",
+  //       "User Management",
+  //       "Course Configuration",
+  //       "Reporting & Analytics",
+  //       "Custom Branding",
+  //     ],
+  //   },
+  //   {
+  //     icon: Workflow,
+  //     title: "Systems Integration",
+  //     skills: [
+  //       "Boomi Platform",
+  //       "API Development",
+  //       "Workflow Automation",
+  //       "Data Synchronization",
+  //       "Custom Integrations",
+  //     ],
+  //   },
+  //   {
+  //     icon: GraduationCap,
+  //     title: "Instructional Design",
+  //     skills: [
+  //       "Course Development",
+  //       "Hands-On Labs",
+  //       "Video Production",
+  //       "Interactive Simulations",
+  //       "Assessment Design",
+  //     ],
+  //   },
+  //   {
+  //     icon: Sparkles,
+  //     title: "Platform Innovation",
+  //     skills: ["AI-Driven Tools", "UX Improvements", "Learning Analytics", "Automation", "Process Optimization"],
+  //   },
+  //   {
+  //     icon: Users,
+  //     title: "Community Engagement",
+  //     skills: [
+  //       "Learner Support",
+  //       "Enrollment Campaigns",
+  //       "Certification Programs",
+  //       "User Adoption",
+  //       "Change Management",
+  //     ],
+  //   },
+  //   {
+  //     icon: BarChart,
+  //     title: "Technical Skills",
+  //     skills: ["JavaScript/TypeScript", "REST APIs", "SQL", "HTML/CSS", "Data Analysis"],
+  //   },
+  // ]
   const skillCategories = [
     {
       icon: Database,
-      title: "LMS Administration",
+      title: "LMS & Platform Management",
       skills: [
-        "Docebo Platform",
-        "User Management",
-        "Course Configuration",
-        "Reporting & Analytics",
-        "Custom Branding",
+        "Full Platform Ownership (end-to-end administration)",
+        "Catalog Maintenance",
+        "Subscription and License Management",
+        "Newsletters, Notifications & Engagement Campaigns",
+        "Domain & Branding Configuration",
+        "Learner Support and Management",
       ],
     },
     {
       icon: Workflow,
-      title: "Systems Integration",
+      title: "Systems Integration & Automation",
       skills: [
-        "Boomi Platform",
-        "API Development",
-        "Workflow Automation",
-        "Data Synchronization",
-        "Custom Integrations",
+        "Event-Driven Process Automation",
+        "REST API and Webhooks",
+        "User Provisioning & Enrollment Logic",
+        "Cross-System Data Sync & Error Handling",
+        "Environment Management",
+        "System Testing & QA"
       ],
     },
     {
       icon: GraduationCap,
-      title: "Instructional Design",
+      title: "Instructional Design & Content",
       skills: [
-        "Course Development",
-        "Hands-On Labs",
-        "Video Production",
-        "Interactive Simulations",
-        "Assessment Design",
+        "Modular Course and Certification Development",
+        "Text, Video, and Interactive Learning Content",
+        "Stakeholder-Alignment",
+        "Certification Curriculum Mapping",
+        "Accessibility & UX Considerations",
+        "SME feedback and collaboration"
       ],
     },
     {
       icon: Sparkles,
-      title: "Platform Innovation",
-      skills: ["AI-Driven Tools", "UX Improvements", "Learning Analytics", "Automation", "Process Optimization"],
+      title: "UX & Platform Design",
+      skills: [
+        "Usability heuristics",
+        "Wireframing & Interface Prototyping",
+        "User Journey Mapping",
+        "Gamification Experience",
+        "Cross-Device Usability Testing",
+        "Information Architecture Design"
+      ],
     },
     {
       icon: Users,
-      title: "Community Engagement",
+      title: "Engagement & Strategy",
       skills: [
-        "Learner Support",
-        "Enrollment Campaigns",
-        "Certification Programs",
-        "User Adoption",
-        "Change Management",
+        "Marketing Campaign Planning & Execution",
+        "User Adoption Strategy",
+        "Certification Program Design",
+        "Digital Badging & Credential Strategy",
+        "Learner Feedback Analysis",
+        "Stakeholder Communication",
       ],
     },
     {
       icon: BarChart,
       title: "Technical Skills",
-      skills: ["JavaScript/TypeScript", "REST APIs", "SQL", "HTML/CSS", "Data Analysis"],
+      skills: [
+        "JavaScript/TypeScript",
+        "NodeJS",
+        "HTML/CSS",
+        "Git & Version Control",
+        "Boomi",
+        "Postman",
+        "Docker"
+      ],
     },
-  ]
+    {
+      icon: BarChart,
+      title: "Content & Design Tools",
+      skills: [
+        "Adobe Suite",
+        "Illustrator",
+        "Premiere Pro",
+        "Articulate 360 (Rise, Review, Storyline)",
+        "11Labs",
+      ],
+    }
+  ];
 
   return (
     <ScrollReveal direction="right">

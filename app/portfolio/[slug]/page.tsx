@@ -6,181 +6,287 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const projects = {
-  "docebo-lms-implementation": {
-    title: "Docebo LMS Implementation & Optimization",
-    subtitle: "Enterprise Learning Management System Transformation",
-    description:
-      "Led enterprise-wide LMS implementation, custom branding, and advanced configuration. Implemented automated workflows and reporting dashboards.",
-    image: "/lms-dashboard.png",
-    tags: ["Docebo", "LMS Administration", "Automation"],
-    duration: "12 months",
-    team: "Cross-functional team of 8",
-    challenge:
-      "The organization needed to modernize its learning infrastructure to support 5,000+ employees across multiple departments. The existing system was outdated, lacked automation, and provided limited reporting capabilities.",
-    solution:
-      "Implemented Docebo LMS with custom branding, automated user provisioning, and advanced reporting dashboards. Designed intuitive navigation and learning paths tailored to different user roles. Integrated with existing HRIS for seamless data flow.",
-    outcomes: [
-      "40% increase in course completions within first 6 months",
-      "60% reduction in administrative time through automation",
-      "95% user satisfaction rating in post-implementation survey",
-      "Reduced onboarding time from 2 weeks to 3 days",
-    ],
-    technologies: ["Docebo", "SCORM", "xAPI", "SSO Integration", "Custom CSS/JavaScript"],
-    responsibilities: [
-      "Led full implementation from requirements gathering to launch",
-      "Configured platform settings, branding, and user roles",
-      "Developed automated workflows for enrollment and notifications",
-      "Created custom reporting dashboards for stakeholders",
-      "Trained administrators and power users",
-      "Provided ongoing optimization and support",
-    ],
-  },
-  "boomi-integration-platform": {
-    title: "Boomi Integration Platform",
-    subtitle: "Seamless System Integration & Data Synchronization",
-    description:
-      "Designed and implemented complex system integrations connecting Docebo with HRIS, CRM, and content repositories. Built custom workflows for data synchronization.",
-    image: "/system-integration-workflow-diagram.jpg",
-    tags: ["Boomi", "Integration", "API Development"],
-    duration: "8 months",
-    team: "Integration team of 4",
-    challenge:
-      "Multiple disconnected systems led to data silos, manual data entry errors, and delayed reporting. The organization needed real-time data synchronization between learning, HR, and business systems.",
-    solution:
-      "Designed and built integration workflows using Dell Boomi to connect Docebo LMS with Workday HRIS, Salesforce CRM, and SharePoint content repositories. Implemented bi-directional data sync, error handling, and monitoring dashboards.",
-    outcomes: [
-      "Real-time data synchronization across all systems",
-      "Eliminated manual data entry, saving 20+ hours per week",
-      "Improved data accuracy to 98%+",
-      "Reduced system onboarding time by 75%",
-    ],
-    technologies: ["Dell Boomi", "REST APIs", "SOAP", "JSON/XML", "OAuth 2.0"],
-    responsibilities: [
-      "Designed integration architecture and data flow diagrams",
-      "Built and tested Boomi integration processes",
-      "Implemented error handling and logging mechanisms",
-      "Created monitoring dashboards for integration health",
-      "Documented integration specifications and runbooks",
-      "Provided training to technical team members",
-    ],
-  },
   "ask-solly-ai": {
-    title: "Ask Solly AI - Learning Assistant",
-    subtitle: "AI-Powered Learning Support & Course Recommendations",
+    title: "Ask Solly AI",
+    subtitle: "AI Assistant for Scalable Learner Support",
     description:
-      "Developed AI-powered learning assistant using natural language processing to provide instant answers to learner questions and course recommendations.",
-    image: "/ai-chatbot-interface.png",
-    tags: ["AI/ML", "Chatbot", "Innovation"],
+      "Built a natural language processing-based learning assistant integrated with Docebo to reduce support overhead and recommend learning content.",
+    image: "/ask-solly-ai.png",
+    tags: ["AI", "Learning Innovation", "Automation"],
     duration: "6 months",
-    team: "Innovation team of 5",
+    team: "Innovation pod of 5",
     challenge:
-      "Learners struggled to find relevant courses and often waited hours for support responses. The support team was overwhelmed with repetitive questions about course navigation and content.",
+      "Learners were struggling to find relevant content and had to wait for manual responses to repeat questions.",
     solution:
-      "Developed an AI-powered chatbot using natural language processing to understand learner queries and provide instant, contextual responses. Integrated with the LMS to offer personalized course recommendations based on user profiles and learning history.",
+      "Developed Ask Solly AI to provide 24/7 assistance, course guidance, and real-time responses using NLP.",
     outcomes: [
-      "24/7 instant learner support availability",
-      "70% reduction in support ticket volume",
-      "4.8/5 average user satisfaction rating",
-      "Increased course discovery by 45%",
+      "Reduced support tickets by 70%",
+      "Increased engagement with course catalog",
+      "Achieved 4.8/5 average satisfaction score"
     ],
-    technologies: ["OpenAI GPT", "Python", "React", "Node.js", "Vector Database"],
+    technologies: ["OpenAI", "React", "Node.js", "Docebo APIs"],
     responsibilities: [
-      "Designed conversational AI architecture and user flows",
-      "Trained AI model on learning content and FAQs",
-      "Built chat interface integrated with LMS",
-      "Implemented recommendation engine using ML algorithms",
-      "Monitored performance and refined responses",
-      "Gathered user feedback for continuous improvement",
-    ],
+      "Designed user flows and AI interaction model",
+      "Trained assistant with learning content and FAQs",
+      "Integrated Solly into LMS interface",
+      "Monitored usage and improved based on feedback"
+    ]
   },
-  "hands-on-lab-environment": {
-    title: "Hands-On Lab Environment",
-    subtitle: "Interactive Technical Training & Simulations",
+  "lms-redesign": {
+    title: "LMS Redesign & Custom Dashboards",
+    subtitle: "Enhancing UX Across Learning Systems",
     description:
-      "Created interactive, browser-based lab environments for technical training. Built custom simulations and sandbox environments for safe practice.",
-    image: "/interactive-coding-lab-environment.jpg",
-    tags: ["Instructional Design", "Simulations", "Technical Training"],
-    duration: "Ongoing (2+ years)",
-    team: "Content development team of 6",
+      "Redesigned Docebo LMS dashboards, pages, and navigation structure to improve user experience and engagement.",
+    image: "/lms-redesign.png",
+    tags: ["Docebo", "UX Design", "LMS Customization"],
+    duration: "4 months",
+    team: "Solo project with stakeholder input",
     challenge:
-      "Technical training relied heavily on passive video content, resulting in low engagement and poor skill retention. Learners needed hands-on practice but setting up local environments was complex and time-consuming.",
+      "The existing LMS layout was cluttered and unintuitive, leading to low course completion rates and learner frustration.",
     solution:
-      "Developed browser-based interactive lab environments where learners could practice technical skills in safe, sandboxed environments. Created 50+ labs covering programming, cloud platforms, and system administration with automated validation and instant feedback.",
+      "Custom-coded pages and dashboards, streamlined menus, and redesigned user pathways. Improved branding and role-based navigation.",
     outcomes: [
-      "85% skill retention rate vs. 20% with video-only",
-      "3x higher engagement compared to traditional content",
-      "50+ interactive labs deployed across curriculum",
-      "Reduced setup time from hours to seconds",
+      "Improved learner satisfaction based on internal surveys",
+      "40% increase in course discovery",
+      "Reduced support tickets related to navigation issues"
     ],
-    technologies: ["Docker", "Kubernetes", "WebAssembly", "Monaco Editor", "AWS"],
+    technologies: ["Docebo", "HTML/CSS", "JavaScript", "SCSS"],
     responsibilities: [
-      "Designed lab architecture and learning objectives",
-      "Built containerized lab environments",
-      "Created automated assessment and validation logic",
-      "Developed user-friendly lab interfaces",
-      "Wrote comprehensive lab instructions and hints",
-      "Monitored lab performance and user analytics",
-    ],
+      "Redesigned LMS interface and menus for improved UX",
+      "Developed custom-coded pages and dashboard widgets",
+      "Implemented branding elements across domains",
+      "Tested and iterated based on user feedback"
+    ]
   },
-  "video-content-production": {
-    title: "Video Content Production Pipeline",
-    subtitle: "Professional Training Video Development at Scale",
-    description:
-      "Established end-to-end video production workflow including scripting, recording, editing, and distribution. Created 100+ professional training videos.",
-    image: "/video-production-studio-setup.jpg",
-    tags: ["Video Production", "Content Development", "Multimedia"],
-    duration: "18 months",
-    team: "Content team of 4",
-    challenge:
-      "The organization needed to rapidly scale video content production while maintaining consistent quality and branding. Existing processes were ad-hoc and time-consuming.",
-    solution:
-      "Established a professional video production pipeline with standardized templates, recording workflows, and editing processes. Set up a dedicated recording studio and trained subject matter experts on effective video presentation techniques.",
+  "ssl-health-check-automation": {
+    title: "SSL Certificate Health Check Automation",
+    subtitle: "Monitoring Infrastructure for Uptime Assurance",
+    description: "Automated a health check for the Docebo LMS SSL certificate, ensuring uninterrupted access and preventing certificate expiration.",
+    image: "/ssl-health-check.png",
+    tags: ["Automation", "Monitoring", "DevOps"],
+    duration: "2 weeks",
+    team: "Solo project",
+    challenge: "LMS access was previously disrupted by expired SSL certificates, creating risk for user trust and business continuity.",
+    solution: "Built a scheduled script that monitors certificate status, alerts stakeholders in advance of expiration, and logs changes for audit purposes.",
     outcomes: [
-      "100+ professional training videos produced",
-      "Consistent brand quality across all content",
-      "90% average video completion rate",
-      "Reduced production time by 50% through standardization",
+      "Proactive alerts reduced downtime risk to near-zero",
+      "Improved platform reliability and stakeholder confidence"
     ],
-    technologies: ["Adobe Premiere Pro", "After Effects", "Camtasia", "OBS Studio", "Audacity"],
+    technologies: ["Node.js", "SSL Checker API", "Email Alerts"],
     responsibilities: [
-      "Designed video production workflow and standards",
-      "Set up recording studio with professional equipment",
-      "Created video templates and brand guidelines",
-      "Trained SMEs on effective video presentation",
-      "Edited and produced final video content",
-      "Managed video distribution and accessibility",
-    ],
+      "Developed monitoring logic for SSL status",
+      "Automated notification system for renewals",
+      "Integrated alerts with Slack and email",
+      "Documented system for internal IT team"
+    ]
   },
-  "learning-analytics-dashboard": {
-    title: "Learning Analytics Dashboard",
-    subtitle: "Data-Driven Insights for Learning Effectiveness",
-    description:
-      "Built comprehensive analytics platform providing real-time insights into learner engagement, course effectiveness, and certification progress.",
-    image: "/analytics-dashboard-charts-graphs.jpg",
-    tags: ["Analytics", "Data Visualization", "Reporting"],
-    duration: "10 months",
-    team: "Analytics team of 3",
-    challenge:
-      "Leadership lacked visibility into learning program effectiveness and ROI. Data was scattered across multiple systems with no unified reporting. Identifying at-risk learners and course improvement opportunities was nearly impossible.",
-    solution:
-      "Built a comprehensive analytics dashboard that aggregates data from multiple sources and provides real-time insights through interactive visualizations. Implemented predictive analytics to identify at-risk learners and automated reporting for stakeholders.",
+  "marketing-strategy-content": {
+    title: "Academy Marketing Strategy & Content",
+    subtitle: "Driving Adoption through Content and Community",
+    description: "Created marketing content, newsletters, and campaigns to promote Solace Academy and increase course enrollments.",
+    image: "/marketing-content.png",
+    tags: ["Marketing", "Engagement", "Learning Strategy"],
+    duration: "Ongoing",
+    team: "Marketing and academy team of 4",
+    challenge: "Lack of awareness and engagement with the Academy's content limited the reach and impact of learning resources.",
+    solution: "Developed and scheduled newsletters, created promotional assets, and coordinated with product marketing for campaign alignment.",
     outcomes: [
-      "Enabled data-driven decision making for learning strategy",
-      "Identified at-risk learners with 85% accuracy",
-      "Improved ROI tracking and program justification",
-      "Reduced reporting time from days to minutes",
+      "Boosted course sign-ups and completions",
+      "Strengthened brand recognition of Solace Academy",
+      "Established consistent learner engagement touchpoints"
     ],
-    technologies: ["Power BI", "SQL", "Python", "Tableau", "REST APIs"],
+    technologies: ["Canva", "Docebo Notifications", "Email Automation"],
     responsibilities: [
-      "Designed analytics architecture and data models",
-      "Built ETL processes to aggregate data from multiple sources",
-      "Created interactive dashboards and visualizations",
-      "Implemented predictive models for learner success",
-      "Automated reporting for stakeholders",
-      "Trained business users on dashboard usage",
+      "Wrote and distributed newsletters",
+      "Designed marketing visuals and course previews",
+      "Built email campaigns using LMS tools",
+      "Collaborated with marketing for event alignment"
+    ]
+  },
+  "erp-workshop-enrollment": {
+    title: "ERP - Integrated Workshop Enrollment",
+    subtitle: "Automated Learner Onboarding via ERP",
+    description: "Integrated LMS with ERP system to automate user creation and enrollment into workshop sessions upon signup.",
+    image: "/erp-enrollment.png",
+    tags: ["Integration", "Automation", "Docebo", "Boomi"],
+    duration: "2 months",
+    team: "Solo developer with ERP team support",
+    challenge: "Manual user enrollment created delays and administrative overhead for recurring technical workshops.",
+    solution: "Built integration that triggers on ERP workshop registration to create LMS users and auto-enroll them into the correct session.",
+    outcomes: [
+      "Eliminated manual enrollment process",
+      "Reduced admin time by 80%",
+      "Improved registration-to-access turnaround from days to minutes"
     ],
+    technologies: ["Boomi", "REST APIs", "Docebo APIs", "Workday"],
+    responsibilities: [
+      "Designed and implemented Boomi workflows",
+      "Mapped ERP data to LMS enrollment logic",
+      "Tested data flow and error handling",
+      "Documented integration for IT handover"
+    ]
+  },
+  "badge-certificate-redesign": {
+    title: "Badge & Certificate Redesign",
+    subtitle: "Modern Visual Identity for Learner Credentials",
+    description: "Redesigned all digital badges and certificates to better reflect Solace brand and improve learner recognition.",
+    image: "/badges-certificates.png",
+    tags: ["Design", "Credentialing", "UX"],
+    duration: "3 weeks",
+    team: "Solo design and implementation",
+    challenge: "Existing certificates were outdated and inconsistent, reducing their value and appeal to learners.",
+    solution: "Created new branded templates and implemented across all relevant LMS courses and programs.",
+    outcomes: [
+      "Enhanced learner satisfaction and credential share rate",
+      "Unified visual identity across all learning assets"
+    ],
+    technologies: ["Adobe Illustrator", "Docebo", "Accredible"],
+    responsibilities: [
+      "Designed new visual templates for badges and certificates",
+      "Coordinated stakeholder feedback and approvals",
+      "Updated LMS settings and automated credential delivery"
+    ]
+  },
+  "accredible-integration": {
+    title: "Digital Badge Vendor Integration",
+    subtitle: "Credential Automation via Accredible",
+    description: "Onboarded and integrated Accredible for automatic badge issuance based on LMS achievements and certifications.",
+    image: "/accredible-integration.png",
+    tags: ["Digital Badging", "Integration", "Automation"],
+    duration: "1 month",
+    team: "Solo project with vendor support",
+    challenge: "Manual badge creation and delivery delayed learner recognition and was unsustainable at scale.",
+    solution: "Integrated LMS with Accredible using webhook and API automation for real-time credential issuance.",
+    outcomes: [
+      "Enabled real-time delivery of digital badges",
+      "Improved credential visibility and learner motivation",
+      "Reduced manual overhead to zero"
+    ],
+    technologies: ["Accredible", "Docebo", "Webhook", "REST API"],
+    responsibilities: [
+      "Configured credential rules and integrations",
+      "Mapped badge designs to certification outcomes",
+      "Tested and deployed end-to-end automation",
+      "Trained support team on platform usage"
+    ]
+  },
+  "topic-hierarchy-site": {
+    title: "Topic Hierarchy Explainer Site",
+    subtitle: "Interactive Guide for Learning Architecture",
+    description: "Built a simple website to help learners and internal teams understand topic hierarchy and course categorization.",
+    image: "/topic-hierarchy.png",
+    tags: ["UX", "Learning Architecture", "Internal Tools"],
+    duration: "2 weeks",
+    team: "Solo build",
+    challenge: "Confusion around how learning content was structured led to learner drop-off and stakeholder misunderstandings.",
+    solution: "Created a static site with visual and text explanations to demystify topic mapping and content organization.",
+    outcomes: [
+      "Reduced internal questions about course organization",
+      "Improved learner navigation confidence",
+      "Provided a shareable link for onboarding"
+    ],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    responsibilities: [
+      "Designed content structure and layout",
+      "Built and deployed static site",
+      "Gathered feedback and iterated on clarity"
+    ]
+  },
+  "EDInt-path": {
+    title: "Solace Certified Event Driven Integration Associate Path",
+    subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
+    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
+    image: "/agent-mesh-course.png",
+    tags: ["Course Development", "Certification", "Solace Platform"],
+    duration: "3 months",
+    team: "Instructional team of 3",
+    challenge: "Solace launched a new product and needed a structured way to certify users quickly and effectively.",
+    solution: "Designed a practitioner learning path, built an anchor course, and integrated assessments aligned with real-world use cases.",
+    outcomes: [
+      "Launched certification in sync with product release",
+      "Drove early adoption among developer community",
+      "Enabled structured training and proof of competency"
+    ],
+    technologies: ["Articulate Rise", "Docebo", "Accredible"],
+    responsibilities: [
+      "Mapped learning objectives to certification criteria",
+      "Built course content and assessments",
+      "Collaborated with product SMEs for accuracy",
+      "Configured LMS rules for issuing credentials"
+    ]
+  },
+  "agent-mesh-path": {
+    title: "Agent Mesh Practitioner Path",
+    subtitle: "Certification Path Design for Product Enablement",
+    description: "Created an e-learning path and certification framework for Solace's Agent Mesh initiative.",
+    image: "/agent-mesh-course.png",
+    tags: ["Course Development", "Certification", "Solace Platform"],
+    duration: "3 months",
+    team: "Instructional team of 3",
+    challenge: "Solace launched a new product and needed a structured way to certify users quickly and effectively.",
+    solution: "Designed a practitioner learning path, built an anchor course, and integrated assessments aligned with real-world use cases.",
+    outcomes: [
+      "Launched certification in sync with product release",
+      "Drove early adoption among developer community",
+      "Enabled structured training and proof of competency"
+    ],
+    technologies: ["Articulate Rise", "Docebo", "Accredible"],
+    responsibilities: [
+      "Mapped learning objectives to certification criteria",
+      "Built course content and assessments",
+      "Collaborated with product SMEs for accuracy",
+      "Configured LMS rules for issuing credentials"
+    ]
+  },
+  "schema-registry-course": {
+    title: "Schema Registry Foundations",
+    subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
+    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
+    image: "/agent-mesh-course.png",
+    tags: ["Course Development", "Certification", "Solace Platform"],
+    duration: "3 months",
+    team: "Instructional team of 3",
+    challenge: "Solace launched a new product and needed a structured way to certify users quickly and effectively.",
+    solution: "Designed a practitioner learning path, built an anchor course, and integrated assessments aligned with real-world use cases.",
+    outcomes: [
+      "Launched certification in sync with product release",
+      "Drove early adoption among developer community",
+      "Enabled structured training and proof of competency"
+    ],
+    technologies: ["Articulate Rise", "Docebo", "Accredible"],
+    responsibilities: [
+      "Mapped learning objectives to certification criteria",
+      "Built course content and assessments",
+      "Collaborated with product SMEs for accuracy",
+      "Configured LMS rules for issuing credentials"
+    ]
+  },
+  "DMR-course": {
+    title: "Performance Tuning for DMR",
+    subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
+    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
+    image: "/agent-mesh-course.png",
+    tags: ["Course Development", "Certification", "Solace Platform"],
+    duration: "3 months",
+    team: "Instructional team of 3",
+    challenge: "Solace launched a new product and needed a structured way to certify users quickly and effectively.",
+    solution: "Designed a practitioner learning path, built an anchor course, and integrated assessments aligned with real-world use cases.",
+    outcomes: [
+      "Launched certification in sync with product release",
+      "Drove early adoption among developer community",
+      "Enabled structured training and proof of competency"
+    ],
+    technologies: ["Articulate Rise", "Docebo", "Accredible"],
+    responsibilities: [
+      "Mapped learning objectives to certification criteria",
+      "Built course content and assessments",
+      "Collaborated with product SMEs for accuracy",
+      "Configured LMS rules for issuing credentials"
+    ]
   },
 }
+
+
 
 export default function PortfolioDetailPage({ params }: { params: { slug: string } }) {
   const project = projects[params.slug as keyof typeof projects]
@@ -349,4 +455,10 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
       </section>
     </div>
   )
+}
+
+export async function generateStaticParams() {
+  return Object.keys(projects).map((slug) => ({
+    slug,
+  }))
 }

@@ -2,11 +2,11 @@
 const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
+  trailingSlash: true,
+
+  // optional: make builds forgiving during setup
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-
-  // Optional, but keeps URLs consistent on GH Pages
-  trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;

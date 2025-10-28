@@ -5,6 +5,11 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 export function AboutSection() {
   const highlights = [
     {
+      icon: Award,
+      title: "Technical Expertise",
+      description: "Expert in LMS administration, integrations, and automation",
+    },
+    {
       icon: Zap,
       title: "Platform Innovation",
       description: "Driving adoption of AI-driven learning tools and UX improvements",
@@ -13,12 +18,7 @@ export function AboutSection() {
       icon: Users,
       title: "Community Engagement",
       description: "Increasing enrollment, completions, and certification rates",
-    },
-    {
-      icon: Award,
-      title: "Technical Excellence",
-      description: "Expert in LMS administration, integrations, and automation",
-    },
+    }
   ]
 
   return (
@@ -34,20 +34,18 @@ export function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm a Learning Technology professional with deep expertise in building and managing scalable learning
-                  platforms that drive measurable business outcomes. My work sits at the intersection of instructional
-                  design, technical implementation, and strategic innovation.
+                  I’m a Learning Technology professional with expertise in building and managing scalable learning platforms.
+                  My work sits at the intersection of instructional design, technical implementation, and strategic problem-solving.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  With hands-on experience in Docebo LMS administration, Boomi systems integration, and custom
+                  With hands-on experience in LMS administration, multi-platform systems integration, and custom
                   e-learning development, I've helped organizations transform their learning ecosystems through
                   automation, AI-powered tools, and data-driven decision making.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I'm passionate about creating learning experiences that are not only engaging and effective, but also
-                  technically robust and scalable. Whether it's building hands-on labs, implementing complex
-                  integrations, or developing AI-driven learning assistants, I bring a unique blend of technical and
-                  pedagogical expertise.
+                  I design learning environments that are engaging, effective, and built to scale.
+                  From developing interactive programs and AI-based tools to  product marketing and course development,
+                  I combine technical skill with a strong focus on how people actually learn.
                 </p>
               </div>
 

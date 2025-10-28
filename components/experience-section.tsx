@@ -1,3 +1,5 @@
+//Currently not being displayed, commented out in page.tsx
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Briefcase, Calendar } from "lucide-react"
@@ -7,9 +9,9 @@ export function ExperienceSection() {
   const experiences = [
     {
       title: "Learning Technology Lead",
-      company: "Tech Company",
-      location: "Ottawa, ON",
-      period: "2021 - Present",
+      company: "Solace",
+      location: "Kanata, ON",
+      period: "2026 - Present",
       description:
         "Lead learning technology initiatives including LMS administration, systems integration, and platform innovation.",
       achievements: [
@@ -23,34 +25,77 @@ export function ExperienceSection() {
     },
     {
       title: "Technical Curriculum Developer",
-      company: "Education Technology Firm",
-      location: "Ottawa, ON",
-      period: "2018 - 2021",
-      description: "Designed and developed technical training programs for software and IT professionals.",
+      company: "Solace",
+      location: "Kanata, ON",
+      period: "2024 – Present",
+      description: "Designed and maintained technical training experiences that blend instructional design, platform development, and strategic automation.",
       achievements: [
-        "Developed 30+ technical courses covering cloud computing, DevOps, and software development",
-        "Built interactive lab environments for hands-on practice",
-        "Produced professional video content with 90%+ completion rates",
-        "Collaborated with SMEs to ensure technical accuracy and relevance",
-        "Implemented learning analytics to track and improve course effectiveness",
+        "Created and maintained a library of 30+ courses including certification pathways and product training",
+        "Redesigned LMS dashboards, menus, and pages for improved usability and learner experience",
+        "Automated enrollment, subscription, and credentialing workflows through ERP and Boomi integrations",
+        "Produced branded video content for both internal training and external marketing campaigns",
+        "Developed a stakeholder-aligned course development process to streamline builds and reduce scope creep",
+        "Integrated and launched Accredible for automated badge delivery and credential tracking",
+        "Collaborated across product, sales, and support teams to align learning initiatives with business goals"
       ],
-      skills: ["Course Development", "Video Production", "Lab Design", "Technical Writing"],
+      skills: [
+        "Docebo LMS",
+        "Articulate 360",
+        "Boomi",
+        "Instructional Design",
+        "Video Production",
+        "Automation",
+        "Platform UX",
+        "Digital Credentialing"
+      ]
     },
     {
-      title: "Instructional Designer",
-      company: "Corporate Training Department",
+      title: "eLearning Developer",
+      company: "CSIS",
       location: "Ottawa, ON",
-      period: "2015 - 2018",
-      description: "Created engaging learning experiences for corporate training programs.",
+      period: "2024 – Present",
+      description: "Designed and produced custom e-learning content for internal training initiatives across multiple departments.",
       achievements: [
-        "Designed 50+ courses across various business topics",
-        "Implemented SCORM-compliant e-learning modules",
-        "Conducted needs analysis and learner assessments",
-        "Managed LMS administration and user support",
-        "Achieved 95% learner satisfaction scores",
+        "Developed 17+ Storyline-based courses used across departments to streamline onboarding and training",
+        "Built a custom content library of graphics, templates, and assets to accelerate production timelines",
+        "Reduced video buffering times by 76% through optimized encoding and delivery techniques",
+        "Created 24 reusable slide templates that improved team-wide authoring efficiency",
+        "Collaborated with SMEs and LMS admins to ensure seamless deployment and technical accuracy"
       ],
-      skills: ["ADDIE Model", "SCORM", "LMS Administration", "Needs Analysis"],
+      skills: ["Articulate Storyline", "Video Editing", "Graphic Design", "LMS Support", "Template Design"]
     },
+    {
+      title: "Junior Full Stack Developer",
+      company: "Salesfloor",
+      location: "Montreal, QC",
+      period: "2022 – 2023",
+      description: "Built and maintained interactive features across a large-scale retail web platform as part of an agile development team.",
+      achievements: [
+        "Contributed 50+ pull requests with new features, bug fixes, and UI improvements",
+        "Boosted online interactions by 113% through collaborative frontend and UX enhancements",
+        "Reviewed team code for quality and consistency, reducing bugs and merge conflicts",
+        "Created technical documentation that improved team efficiency and onboarding",
+        "Proposed solutions based on software requirement analysis and user experience reviews"
+      ],
+      skills: ["JavaScript", "Node.js", "React", "Git", "UX Collaboration", "Agile Development"]
+    },
+    {
+      title: "Multimedia Specialist / Web Developer",
+      company: "CBSA",
+      location: "Ottawa, ON",
+      period: "2021 – 2022",
+      description: "Created digital training tools and dashboards for internal agency use in both English and French.",
+      achievements: [
+        "Developed multiple SCORM-compliant e-learning courses using Adapt Framework",
+        "Built internal dashboards for document and training video access across departments",
+        "Ensured accessibility and bilingual compliance in multimedia and e-learning products",
+        "Troubleshot LMS issues and resolved content versioning challenges"
+      ],
+      skills: ["Adapt Framework", "Web Development", "SCORM", "LMS Troubleshooting", "Bilingual Content"]
+    }
+
+
+
   ]
 
   return (
@@ -62,7 +107,7 @@ export function ExperienceSection() {
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Experience</h2>
               <div className="h-1 w-20 bg-primary rounded-full" />
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Professional journey in learning technology, instructional design, and platform innovation.
+                Professional journey in learning technology, instructional design, and software development.
               </p>
             </div>
 
