@@ -15,7 +15,8 @@ export function HeroSection() {
                 <span>Ottawa, Ontario</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
-                Learning Technology Lead
+                {/*Learning Technology Lead*/}
+                Technical Curriculum Developer
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground text-pretty">
                 {/* I build and manage learning platforms that scale. */}
