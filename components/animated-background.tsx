@@ -12,57 +12,27 @@ export function AnimatedBackground() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Set canvas size
+    // Set canvas to viewport size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
-      canvas.height = document.documentElement.scrollHeight
+      canvas.height = window.innerHeight
     }
     resizeCanvas()
     window.addEventListener("resize", resizeCanvas)
 
     // Particle system for floating tech symbols
-    const particles: Array<{
-      x: number
-      y: number
-      size: number
-      speedX: number
-      speedY: number
-      opacity: number
-      symbol: string
-      isWord: boolean
-    }> = []
+    const codeSymbols = ["{ }", "[ ]", "</>", "&&", "||", "==="]
+    const VISIBLE_COUNT = 5
 
-    const codeSymbols = ["{ }", "[ ]"]
-
-    const keywords = [
-      "innovation",
-      "scale",
-      "automation",
-      "integration",
-      "AI-driven",
-      "data-driven",
-      "engagement",
-      "excellence",
-      "transformation",
-      "optimize",
-    ]
-
-    // Mix of code symbols and keywords
-    for (let i = 0; i < 50; i++) {
-      const isWord = Math.random() > 0.6 // 40% chance of being a keyword
-      const symbolSet = isWord ? keywords : codeSymbols
-
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: isWord ? Math.random() * 10 + 12 : Math.random() * 24 + 14,
-        speedX: (Math.random() - 0.5) * 0.5,
-        speedY: (Math.random() - 0.5) * 0.5,
-        opacity: isWord ? Math.random() * 0.12 + 0.06 : Math.random() * 0.15 + 0.08,
-        symbol: symbolSet[Math.floor(Math.random() * symbolSet.length)],
-        isWord,
-      })
-    }
+    const particles = codeSymbols.slice(0, VISIBLE_COUNT).map((symbol, i) => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 24 + 14,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+      opacity: Math.random() * 0.15 + 0.08,
+      symbol,
+    }))
 
     const drawGrid = () => {
       ctx.strokeStyle = "rgba(59, 130, 246, 0.08)"
@@ -105,7 +75,7 @@ export function AnimatedBackground() {
         if (particle.y > canvas.height + 50) particle.y = -50
 
         // Draw symbol
-        ctx.font = particle.isWord ? `${particle.size}px sans-serif` : `${particle.size}px monospace`
+        ctx.font = `${particle.size}px monospace`
         ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`
         ctx.fillText(particle.symbol, particle.x, particle.y)
       })

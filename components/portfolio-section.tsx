@@ -185,7 +185,7 @@ export function PortfolioSection() {
                   <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full flex flex-col cursor-pointer">
                     <div className="relative aspect-video overflow-hidden bg-muted">
                       <img
-                        src={`/ES_Portfolio_2025/${project.image}` || "/ES_Portfolio_2025/placeholder.svg"}
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/${project.image}` || `${process.env.NEXT_PUBLIC_BASE_PATH}/placeholder.svg`}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
