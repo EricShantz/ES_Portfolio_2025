@@ -19,10 +19,26 @@ export function ContactSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    setStatus("sending")
+    try {
+      const res = await fetch("https://formspree.io/f/xojyjbjo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setStatus("success")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -152,10 +168,16 @@ export function ContactSection() {
                         required
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full sm:w-auto">
+                    <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "sending"}>
                       <Send className="mr-2 h-4 w-4" />
-                      Send Message
+                      {status === "sending" ? "Sending..." : "Send Message"}
                     </Button>
+                    {status === "success" && (
+                      <p className="text-sm text-green-600">Message sent successfully!</p>
+                    )}
+                    {status === "error" && (
+                      <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
+                    )}
                   </form>
                 </CardContent>
               </Card>
