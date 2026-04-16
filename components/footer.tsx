@@ -76,7 +76,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-sm text-muted-foreground text-center">
-            © {currentYear} Eric Shantz Portfolio. All rights reserved.
+            © {currentYear} Eric Shantz. All rights reserved.
           </p>
         </div>
       </div>

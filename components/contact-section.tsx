@@ -50,7 +50,7 @@ export function ContactSection() {
 
   return (
     <ScrollReveal direction="left">
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4 text-center">
