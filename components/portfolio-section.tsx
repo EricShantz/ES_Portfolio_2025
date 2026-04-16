@@ -3,67 +3,72 @@
 import { useRef, useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { TrendingUp } from "lucide-react"
+import { TrendingUp, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-function CustomScrollbar({ scrollRef }: { scrollRef: React.RefObject<HTMLDivElement | null> }) {
-  const [thumbWidth, setThumbWidth] = useState(0)
-  const [thumbLeft, setThumbLeft] = useState(0)
-  const trackRef = useRef<HTMLDivElement>(null)
+function ScrollableRow({ children }: { children: React.ReactNode }) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
 
-  const update = useCallback(() => {
+  const updateScrollState = useCallback(() => {
     const el = scrollRef.current
     if (!el) return
-    const ratio = el.clientWidth / el.scrollWidth
-    setThumbWidth(ratio * 100)
-    const scrollRatio = el.scrollLeft / (el.scrollWidth - el.clientWidth)
-    setThumbLeft(scrollRatio * (100 - ratio * 100))
-  }, [scrollRef])
+    setCanScrollLeft(el.scrollLeft > 0)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1)
+  }, [])
 
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-    update()
-    el.addEventListener("scroll", update)
-    window.addEventListener("resize", update)
+    updateScrollState()
+    el.addEventListener("scroll", updateScrollState)
+    window.addEventListener("resize", updateScrollState)
     return () => {
-      el.removeEventListener("scroll", update)
-      window.removeEventListener("resize", update)
+      el.removeEventListener("scroll", updateScrollState)
+      window.removeEventListener("resize", updateScrollState)
     }
-  }, [scrollRef, update])
+  }, [updateScrollState])
 
-  const handleTrackClick = (e: React.MouseEvent) => {
+  const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current
-    const track = trackRef.current
-    if (!el || !track) return
-    const rect = track.getBoundingClientRect()
-    const clickRatio = (e.clientX - rect.left) / rect.width
-    const maxScroll = el.scrollWidth - el.clientWidth
-    el.scrollTo({ left: clickRatio * maxScroll, behavior: "smooth" })
+    if (!el) return
+    const amount = 380
+    el.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" })
   }
 
-  if (thumbWidth >= 100) return null
-
   return (
-    <div
-      ref={trackRef}
-      className="mx-auto mt-3 h-2 rounded-full bg-foreground/5 cursor-pointer"
-      style={{ width: "25%" }}
-      onClick={handleTrackClick}
-    >
-      <div
-        className="h-full rounded-full bg-foreground/15 hover:bg-foreground/25 transition-colors"
-        style={{ width: `${thumbWidth}%`, marginLeft: `${thumbLeft}%` }}
-      />
+    <div className="relative">
+      {/* Left arrow */}
+      {canScrollLeft && (
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-blue-950 shadow-md p-3 hover:bg-blue-900 transition-colors"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="h-6 w-6 text-white" />
+        </button>
+      )}
+      {/* Right arrow */}
+      {canScrollRight && (
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-20 rounded-full bg-blue-950 shadow-md p-3 hover:bg-blue-900 transition-colors"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="h-6 w-6 text-white" />
+        </button>
+      )}
+
+      <div ref={scrollRef} className="flex gap-6 overflow-x-auto pb-4 portfolio-scroll px-[max(1rem,calc((100vw-72rem)/2-10px))] sm:px-[max(1.5rem,calc((100vw-72rem)/2-10px))] lg:px-[max(2rem,calc((100vw-72rem)/2-10px))]">
+        {children}
+      </div>
     </div>
   )
 }
 
 export function PortfolioSection() {
-  const coursesScrollRef = useRef<HTMLDivElement>(null)
-  const platformScrollRef = useRef<HTMLDivElement>(null)
-
   const courses = [
     {
       slug: "agent-mesh-path",
@@ -272,20 +277,22 @@ export function PortfolioSection() {
             <h3 className="text-2xl font-semibold tracking-tight">Courses</h3>
           </div>
         </div>
-        <div ref={coursesScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll px-[max(1rem,calc((100vw-72rem)/2-10px))] sm:px-[max(1.5rem,calc((100vw-72rem)/2-10px))] lg:px-[max(2rem,calc((100vw-72rem)/2-10px))]">
-          {courses.map(renderCard)}
+        <div className="mt-4">
+          <ScrollableRow>
+            {courses.map(renderCard)}
+          </ScrollableRow>
         </div>
-        <CustomScrollbar scrollRef={coursesScrollRef} />
 
         <div className="px-4 sm:px-6 lg:px-8 mt-8">
           <div className="container mx-auto max-w-6xl">
-            <h3 className="text-2xl font-semibold tracking-tight">Platform & Tools</h3>
+            <h3 className="text-2xl font-semibold tracking-tight">Platform & Tooling</h3>
           </div>
         </div>
-        <div ref={platformScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll px-[max(1rem,calc((100vw-72rem)/2-10px))] sm:px-[max(1.5rem,calc((100vw-72rem)/2-10px))] lg:px-[max(2rem,calc((100vw-72rem)/2-10px))]">
-          {platformProjects.map(renderCard)}
+        <div className="mt-4">
+          <ScrollableRow>
+            {platformProjects.map(renderCard)}
+          </ScrollableRow>
         </div>
-        <CustomScrollbar scrollRef={platformScrollRef} />
       </section>
     </ScrollReveal>
   )
