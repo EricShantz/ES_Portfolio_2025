@@ -46,7 +46,7 @@ export function BlogSection() {
           <div className="space-y-12">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Latest Insights</h2>
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Latest Insights</h2>
                 <div className="h-1 w-20 bg-primary rounded-full" />
                 <p className="text-lg text-muted-foreground max-w-2xl">
                   Thoughts on learning technology, platform innovation, and industry trends.

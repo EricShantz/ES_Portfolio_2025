@@ -11,7 +11,7 @@ const projects = {
     subtitle: "AI Assistant for Scalable Learner Support",
     description:
       "Built a natural language processing-based learning assistant integrated with Docebo to reduce support overhead and recommend learning content.",
-    image: "/ask-solly-ai.png",
+    image: "/ask-solly.PNG",
     tags: ["AI", "Learning Innovation", "Automation"],
     duration: "6 months",
     team: "Innovation pod of 5",
@@ -37,7 +37,7 @@ const projects = {
     subtitle: "Enhancing UX Across Learning Systems",
     description:
       "Redesigned Docebo LMS dashboards, pages, and navigation structure to improve user experience and engagement.",
-    image: "/lms-redesign.png",
+    image: "/SoAc-landing-page.PNG",
     tags: ["Docebo", "UX Design", "LMS Customization"],
     duration: "4 months",
     team: "Solo project with stakeholder input",
@@ -62,7 +62,7 @@ const projects = {
     title: "SSL Certificate Health Check Automation",
     subtitle: "Monitoring Infrastructure for Uptime Assurance",
     description: "Automated a health check for the Docebo LMS SSL certificate, ensuring uninterrupted access and preventing certificate expiration.",
-    image: "/ssl-health-check.png",
+    image: "/SSL-check.png",
     tags: ["Automation", "Monitoring", "DevOps"],
     duration: "2 weeks",
     team: "Solo project",
@@ -84,7 +84,7 @@ const projects = {
     title: "Academy Marketing Strategy & Content",
     subtitle: "Driving Adoption through Content and Community",
     description: "Created marketing content, newsletters, and campaigns to promote Solace Academy and increase course enrollments.",
-    image: "/marketing-content.png",
+    image: "/2025-feature-update-linkedin.PNG",
     tags: ["Marketing", "Engagement", "Learning Strategy"],
     duration: "Ongoing",
     team: "Marketing and academy team of 4",
@@ -107,7 +107,7 @@ const projects = {
     title: "ERP - Integrated Workshop Enrollment",
     subtitle: "Automated Learner Onboarding via ERP",
     description: "Integrated LMS with ERP system to automate user creation and enrollment into workshop sessions upon signup.",
-    image: "/erp-enrollment.png",
+    image: "/ERP-registration.PNG",
     tags: ["Integration", "Automation", "Docebo", "Boomi"],
     duration: "2 months",
     team: "Solo developer with ERP team support",
@@ -126,45 +126,27 @@ const projects = {
       "Documented integration for IT handover"
     ]
   },
-  "badge-certificate-redesign": {
-    title: "Badge & Certificate Redesign",
-    subtitle: "Modern Visual Identity for Learner Credentials",
-    description: "Redesigned all digital badges and certificates to better reflect Solace brand and improve learner recognition.",
-    image: "/badges-certificates.png",
-    tags: ["Design", "Credentialing", "UX"],
-    duration: "3 weeks",
-    team: "Solo design and implementation",
-    challenge: "Existing certificates were outdated and inconsistent, reducing their value and appeal to learners.",
-    solution: "Created new branded templates and implemented across all relevant LMS courses and programs.",
-    outcomes: [
-      "Enhanced learner satisfaction and credential share rate",
-      "Unified visual identity across all learning assets"
-    ],
-    technologies: ["Adobe Illustrator", "Docebo", "Accredible"],
-    responsibilities: [
-      "Designed new visual templates for badges and certificates",
-      "Coordinated stakeholder feedback and approvals",
-      "Updated LMS settings and automated credential delivery"
-    ]
-  },
-  "accredible-integration": {
-    title: "Digital Badge Vendor Integration",
-    subtitle: "Credential Automation via Accredible",
-    description: "Onboarded and integrated Accredible for automatic badge issuance based on LMS achievements and certifications.",
-    image: "/accredible-integration.png",
-    tags: ["Digital Badging", "Integration", "Automation"],
-    duration: "1 month",
+  "credential-automation": {
+    title: "Credential Automation",
+    subtitle: "Badge Redesign & Automated Issuance via Accredible",
+    description: "Redesigned all digital badges and certificates to reflect the Solace brand, then integrated Accredible for automated credential issuance based on LMS achievements.",
+    image: "/New_Badge.png",
+    tags: ["Design", "Credentialing", "Integration", "Automation"],
+    duration: "2 months",
     team: "Solo project with vendor support",
-    challenge: "Manual badge creation and delivery delayed learner recognition and was unsustainable at scale.",
-    solution: "Integrated LMS with Accredible using webhook and API automation for real-time credential issuance.",
+    challenge: "Existing certificates were outdated and inconsistent, and manual badge delivery delayed learner recognition and was unsustainable at scale.",
+    solution: "Created new branded templates, then integrated the LMS with Accredible using webhook and API automation for real-time credential issuance.",
     outcomes: [
-      "Enabled real-time delivery of digital badges",
+      "Unified visual identity across all learning credentials",
+      "Enabled real-time automated delivery of digital badges",
       "Improved credential visibility and learner motivation",
       "Reduced manual overhead to zero"
     ],
-    technologies: ["Accredible", "Docebo", "Webhook", "REST API"],
+    technologies: ["Adobe Illustrator", "Accredible", "Docebo", "Webhook", "REST API"],
     responsibilities: [
-      "Configured credential rules and integrations",
+      "Designed new visual templates for badges and certificates",
+      "Coordinated stakeholder feedback and approvals",
+      "Configured credential rules and Accredible integration",
       "Mapped badge designs to certification outcomes",
       "Tested and deployed end-to-end automation",
       "Trained support team on platform usage"
@@ -174,7 +156,7 @@ const projects = {
     title: "Topic Hierarchy Explainer Site",
     subtitle: "Interactive Guide for Learning Architecture",
     description: "Built a simple website to help learners and internal teams understand topic hierarchy and course categorization.",
-    image: "/topic-hierarchy.png",
+    image: "/topic-tester.PNG",
     tags: ["UX", "Learning Architecture", "Internal Tools"],
     duration: "2 weeks",
     team: "Solo build",
@@ -195,8 +177,8 @@ const projects = {
   "EDInt-path": {
     title: "Solace Certified Event Driven Integration Associate Path",
     subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
-    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
-    image: "/agent-mesh-course.png",
+    description: "Created an e-learning Certification path for Solace’s ‘Integration Reimagined’ campaign",
+    image: "/EDInt-path.png",
     tags: ["Course Development", "Certification", "Solace Platform"],
     duration: "3 months",
     team: "Instructional team of 3",
@@ -219,7 +201,7 @@ const projects = {
     title: "Agent Mesh Practitioner Path",
     subtitle: "Certification Path Design for Product Enablement",
     description: "Created an e-learning path and certification framework for Solace's Agent Mesh initiative.",
-    image: "/agent-mesh-course.png",
+    image: "/sam-lp.jpeg",
     tags: ["Course Development", "Certification", "Solace Platform"],
     duration: "3 months",
     team: "Instructional team of 3",
@@ -241,8 +223,8 @@ const projects = {
   "schema-registry-course": {
     title: "Schema Registry Foundations",
     subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
-    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
-    image: "/agent-mesh-course.png",
+    description: "Created an e-learning Certification path for Solace’s ‘Integration Reimagined’ campaign",
+    image: "/schema-registry.jpeg",
     tags: ["Course Development", "Certification", "Solace Platform"],
     duration: "3 months",
     team: "Instructional team of 3",
@@ -264,8 +246,8 @@ const projects = {
   "DMR-course": {
     title: "Performance Tuning for DMR",
     subtitle: "For architects who want to validate their knowledge to event-enable an organization’s integration infrastructure with Solace Platform",
-    description: "Created an e-learning Certification path for Solace's 'Integration Reimagined' campaign",
-    image: "/agent-mesh-course.png",
+    description: "Created an e-learning Certification path for Solace’s ‘Integration Reimagined’ campaign",
+    image: "/DMR-course.jpeg",
     tags: ["Course Development", "Certification", "Solace Platform"],
     duration: "3 months",
     team: "Instructional team of 3",
@@ -298,7 +280,7 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+      <section className="relative pt-20 pb-2 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-accent/10">
         <div className="container mx-auto max-w-5xl">
           <Link href="/#portfolio">
             <Button variant="ghost" className="mb-8 group">
@@ -307,39 +289,36 @@ export default function PortfolioDetailPage({ params }: { params: { slug: string
             </Button>
           </Link>
 
-          <div className="space-y-6">
-            <div className="flex flex-wrap gap-2">
+          <div className="space-y-4">
+            <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag, i) => (
-                <Badge key={i} variant="secondary" className="text-sm">
+                <Badge key={i} variant="outline" className="text-sm rounded-full bg-transparent border-foreground">
                   {tag}
                 </Badge>
               ))}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance">{project.title}</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-balance">{project.title}</h1>
 
-            <p className="text-xl sm:text-2xl text-muted-foreground text-balance">{project.subtitle}</p>
-
-            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>{project.duration}</span>
+            <div className="grid md:grid-cols-[2fr_3fr] gap-12 items-center mt-8">
+              <div className="relative aspect-video overflow-hidden rounded-lg shadow-2xl">
+                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}` || `${process.env.NEXT_PUBLIC_BASE_PATH}/placeholder.svg`}
+                  alt={project.title} className="w-full h-full object-cover" />
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span>{project.team}</span>
+              <div className="space-y-4">
+                <p className="text-base sm:text-lg text-muted-foreground text-balance">{project.subtitle}</p>
+                <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    <span>{project.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="h-4 w-4" />
+                    <span>{project.team}</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Image */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl">
-          <div className="relative aspect-video overflow-hidden rounded-lg shadow-2xl">
-            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}` || `${process.env.NEXT_PUBLIC_BASE_PATH}/placeholder.svg`}
-              alt={project.title} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

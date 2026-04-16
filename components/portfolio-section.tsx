@@ -49,7 +49,7 @@ function CustomScrollbar({ scrollRef }: { scrollRef: React.RefObject<HTMLDivElem
     <div
       ref={trackRef}
       className="mx-auto mt-3 h-2 rounded-full bg-foreground/5 cursor-pointer"
-      style={{ width: "76.5%" }}
+      style={{ width: "25%" }}
       onClick={handleTrackClick}
     >
       <div
@@ -135,7 +135,7 @@ export function PortfolioSection() {
     },
     {
       slug: "marketing-strategy-content",
-      title: "Academy Marketing Strategy & Content",
+      title: "Marketing Strategy & Content",
       description:
         "Created marketing campaigns/content, video assets, and social media strategies to promote the Solace Academy brand.",
       image: "/2025-feature-update-linkedin.PNG",
@@ -144,7 +144,7 @@ export function PortfolioSection() {
         "Enhanced brand visibility",
         "Streamlined communication"
       ],
-      tags: ["Marketing", "Content Strategy", "Community Engagement"]
+      tags: ["Marketing", "Content Strategy", "Client Engagement"]
     },
     {
       slug: "ask-solly-ai",
@@ -157,7 +157,7 @@ export function PortfolioSection() {
         "Reduced support queries",
         "Boosted content discoverability"
       ],
-      tags: ["AI", "LMS Enhancement", "User Experience", "Full-Stack Development"]
+      tags: ["AI", "LMS Enhancement", "Full-Stack Development"]
     },
     {
       slug: "topic-hierarchy-site",
@@ -170,11 +170,11 @@ export function PortfolioSection() {
         "Reduced support questions",
         "Reusable internal asset"
       ],
-      tags: ["Instructional Design", "Web Development", "User Education"]
+      tags: ["Web Development", "Interactive Education"]
     },
     {
       slug: "ssl-health-check-automation",
-      title: "SSL Certificate Health Check Automation",
+      title: "SSL Certificate Health Check",
       description:
         "Automated monitoring for LMS SSL certificates, reducing downtime risks and manual oversight.",
       image: "/SSL-check.png",
@@ -199,30 +199,17 @@ export function PortfolioSection() {
       tags: ["Integration", "Automation", "LMS Workflow"]
     },
     {
-      slug: "badge-certificate-redesign",
-      title: "Badge & Certificate Design",
+      slug: "credential-automation",
+      title: "Credential Automation",
       description:
-        "Redesigned the Academy’s badges and certificates with a modern, professional look.",
+        "Redesigned badges and certificates, and integrated Accredible to automate issuing credentials at scale.",
       image: "/New_Badge.png",
       outcomes: [
-        "Improved visual consistency",
-        "Enhanced learner recognition",
-        "Brand alignment"
+        "Unified credential branding",
+        "Automated real-time badge delivery",
+        "Zero manual overhead"
       ],
-      tags: ["Visual Design", "Branding", "Learner Engagement"]
-    },
-    {
-      slug: "accredible-integration",
-      title: "Accredible Integration",
-      description:
-        "Onboarded and automated a digital badge platform (Accredible) to issue credentials at scale.",
-      image: "/accredible-home-page.PNG",
-      outcomes: [
-        "Automated credential delivery",
-        "Improved badge management",
-        "Enhanced learner experience"
-      ],
-      tags: ["Automation", "Integration", "Credentialing"]
+      tags: ["Automation", "Integration", "Design", "Credentialing"]
     }
   ];
 
@@ -271,32 +258,32 @@ export function PortfolioSection() {
 
   return (
     <ScrollReveal direction="left">
-      <section id="portfolio" className="py-24 bg-muted/30 overflow-x-clip">
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Portfolio & Case Studies</h2>
-            <div className="h-1 w-20 bg-primary rounded-full" />
-            <p className="text-lg text-muted-foreground max-w-2xl">
-              A cross-section of projects spanning e-learning development, platform customization, automation, and digital learning strategy
-            </p>
-          </div>
+      <section id="portfolio" className="py-24 overflow-x-clip">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-6xl space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Portfolio & Case Studies</h2>
+              <div className="h-1 w-20 bg-primary rounded-full" />
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                A cross-section of projects spanning e-learning development, platform customization, automation, and digital learning strategy
+              </p>
+            </div>
 
-          <h3 className="text-2xl font-semibold tracking-tight">Courses</h3>
+            <h3 className="text-2xl font-semibold tracking-tight">Courses</h3>
+          </div>
         </div>
-        <div ref={coursesScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll">
-          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+        <div ref={coursesScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll px-[max(1rem,calc((100vw-72rem)/2-10px))] sm:px-[max(1.5rem,calc((100vw-72rem)/2-10px))] lg:px-[max(2rem,calc((100vw-72rem)/2-10px))]">
           {courses.map(renderCard)}
-          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
         </div>
         <CustomScrollbar scrollRef={coursesScrollRef} />
 
-        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mt-8">
-          <h3 className="text-2xl font-semibold tracking-tight">Platform & Tools</h3>
+        <div className="px-4 sm:px-6 lg:px-8 mt-8">
+          <div className="container mx-auto max-w-6xl">
+            <h3 className="text-2xl font-semibold tracking-tight">Platform & Tools</h3>
+          </div>
         </div>
-        <div ref={platformScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll">
-          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+        <div ref={platformScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll px-[max(1rem,calc((100vw-72rem)/2-10px))] sm:px-[max(1.5rem,calc((100vw-72rem)/2-10px))] lg:px-[max(2rem,calc((100vw-72rem)/2-10px))]">
           {platformProjects.map(renderCard)}
-          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
         </div>
         <CustomScrollbar scrollRef={platformScrollRef} />
       </section>

@@ -64,70 +64,63 @@ export function SkillsSection() {
       icon: Database,
       title: "LMS & Platform Management",
       skills: [
-        "Full Platform Ownership (end-to-end administration)",
-        "Catalog Maintenance",
-        "Subscription and License Management",
-        "Newsletters, Notifications & Engagement Campaigns",
-        "Domain & Branding Configuration",
-        "Learner Support and Management",
+        "End-to-End Platform Administration & Governance",
+        "Course Catalog Architecture & Lifecycle Management",
+        "License & Subscription Lifecycle Management",
+        "Multi-Channel Learner Outreach: Newsletters, Notifications & Drip Campaigns",
+        "Platform Branding & Domain Configuration",
+        "Learner Support, Troubleshooting & Experience Optimization",
       ],
     },
     {
       icon: Workflow,
       title: "Systems Integration & Automation",
       skills: [
-        "Event-Driven Process Automation",
-        "REST API and Webhooks",
-        "User Provisioning & Enrollment Logic",
-        "Cross-System Data Sync & Error Handling",
-        "Environment Management",
-        "System Testing & QA"
+        "Event-Driven Workflow Design & Process Automation",
+        "REST API & Event-Driven Integration Across Systems",
+        "Rule-Based Enrollment & User Lifecycle Automation",
+        "Cross-Platform Data Synchronization & Error Recovery",
+        "Multi-Environment Setup & Deployment Coordination",
+        "End-to-End System Testing & Quality Assurance"
       ],
     },
     {
       icon: GraduationCap,
       title: "Instructional Design & Content",
       skills: [
-        "Modular Course and Certification Development",
-        "Text, Video, and Interactive Learning Content",
-        "Stakeholder-Alignment",
-        "Certification Curriculum Mapping",
-        "Accessibility & UX Considerations",
-        "SME feedback and collaboration"
-      ],
-    },
-    {
-      icon: Sparkles,
-      title: "UX & Platform Design",
-      skills: [
-        "Usability heuristics",
-        "Wireframing & Interface Prototyping",
-        "User Journey Mapping",
-        "Gamification Experience",
-        "Cross-Device Usability Testing",
-        "Information Architecture Design"
+        "Modular Course Architecture & Certification Path Design",
+        "Content Authoring Across Written, Video & Interactive Formats",
+        "Bridging Technical & Non-Technical Stakeholders on Content Direction",
+        "Learning Outcome Mapping & Certification Path Architecture",
+        "Accessible Design & Learner-Centered UX",
+        "Structured SME Review Workflows & Feedback Integration"
       ],
     },
     {
       icon: Users,
       title: "Engagement & Strategy",
       skills: [
-        "Marketing Campaign Planning & Execution",
-        "User Adoption Strategy",
-        "Certification Program Design",
-        "Digital Badging & Credential Strategy",
-        "Learner Feedback Analysis",
-        "Stakeholder Communication",
+        "Planning & Executing Multi-Channel Marketing Campaigns",
+        "User Adoption Strategy & Onboarding Optimization",
+        "End-to-End Certification Program Design & Launch",
+        "Digital Credentialing & Badge Program Design at Scale",
+        "Learner Feedback Collection, Analysis & Action Planning",
+        "Translating Technical Progress Into Stakeholder-Ready Updates",
       ],
     },
     {
       icon: BarChart,
       title: "Technical Skills",
       skills: [
-        "JavaScript/TypeScript",
-        "NodeJS",
+        "JavaScript",
+        "TypeScript",
+        "React/Next.js",
+        "Node.js",
         "HTML/CSS",
-        "Git & Version Control",
+        "CI/CD Pipelines",
+        "REST APIs",
+        "Shell Scripting",
+        "AI Agent Dev",
         "Boomi",
         "Postman",
         "Docker"
@@ -137,11 +130,12 @@ export function SkillsSection() {
       icon: BarChart,
       title: "Content & Design Tools",
       skills: [
-        "Adobe Suite",
         "Illustrator",
         "Premiere Pro",
         "Articulate 360 (Rise, Review, Storyline)",
         "11Labs",
+        "OBS",
+        "PowerPoint",
       ],
     }
   ];
@@ -152,7 +146,7 @@ export function SkillsSection() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Skills & Expertise</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Skills & Expertise</h2>
               <div className="h-1 w-20 bg-primary rounded-full" />
               <p className="text-lg text-muted-foreground max-w-2xl">
                 A comprehensive skill set spanning learning technology, systems integration, and instructional design.
@@ -169,7 +163,7 @@ export function SkillsSection() {
                       </div>
                       <h3 className="font-semibold text-lg">{category.title}</h3>
                     </div>
-                    <ul className="space-y-2">
+                    <ul className={`space-y-2 ${category.title === "Technical Skills" ? "grid grid-cols-2 gap-x-4 gap-y-0.5 space-y-0" : ""}`}>
                       {category.skills.map((skill, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
                           <span className="text-primary mt-1">•</span>

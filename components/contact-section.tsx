@@ -38,7 +38,7 @@ export function ContactSection() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Get in Touch</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Get in Touch</h2>
               <div className="h-1 w-20 bg-primary rounded-full mx-auto" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Interested in learning more about my work? Let's connect.
@@ -99,7 +99,7 @@ export function ContactSection() {
               {/* Contact Form */}
               <Card className="lg:col-span-2">
                 <CardHeader>
-                  <CardTitle>Send a Message</CardTitle>
+                  <CardTitle>Send me a message!</CardTitle>
                   <CardDescription>Fill out the form below and I'll get back to you soon</CardDescription>
                 </CardHeader>
                 <CardContent>

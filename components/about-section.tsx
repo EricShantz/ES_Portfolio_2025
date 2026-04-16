@@ -27,7 +27,7 @@ export function AboutSection() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">About Me</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">About Me</h2>
               <div className="h-1 w-20 bg-primary rounded-full" />
             </div>
 
@@ -52,7 +52,7 @@ export function AboutSection() {
               <div className="space-y-4">
                 {highlights.map((highlight, index) => (
                   <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex gap-4">
+                    <div className="flex items-center gap-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                           <highlight.icon className="h-6 w-6 text-primary" />

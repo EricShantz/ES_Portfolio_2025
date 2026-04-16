@@ -104,7 +104,7 @@ export function ExperienceSection() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Experience</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Experience</h2>
               <div className="h-1 w-20 bg-primary rounded-full" />
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Professional journey in learning technology, instructional design, and software development.
