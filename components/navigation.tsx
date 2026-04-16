@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Navigation() {
@@ -35,13 +35,15 @@ export function Navigation() {
         {/* full width wrapper with responsive horizontal padding */}
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo / Title */}
-            <Link
-              href="/"
-              className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
+            {/* Resume Download */}
+            <a
+              href="/Eric Shantz Resume.pdf"
+              download
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              Portfolio
-            </Link>
+              <Download className="h-4 w-4" />
+              <span className="hidden sm:inline">Resume</span>
+            </a>
 
             {/* Mobile Menu Button - top right */}
             <Button
