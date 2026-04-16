@@ -51,7 +51,7 @@ export function AboutSection() {
 
               <div className="space-y-4">
                 {highlights.map((highlight, index) => (
-                  <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                  <Card key={index} className="p-6 shadow-none">
                     <div className="flex items-center gap-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
