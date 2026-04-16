@@ -1,12 +1,70 @@
+"use client"
+
+import { useRef, useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { TrendingUp } from "lucide-react"
 import Link from "next/link"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
-export function PortfolioSection() {
+function CustomScrollbar({ scrollRef }: { scrollRef: React.RefObject<HTMLDivElement | null> }) {
+  const [thumbWidth, setThumbWidth] = useState(0)
+  const [thumbLeft, setThumbLeft] = useState(0)
+  const trackRef = useRef<HTMLDivElement>(null)
 
-  const projects = [
+  const update = useCallback(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const ratio = el.clientWidth / el.scrollWidth
+    setThumbWidth(ratio * 100)
+    const scrollRatio = el.scrollLeft / (el.scrollWidth - el.clientWidth)
+    setThumbLeft(scrollRatio * (100 - ratio * 100))
+  }, [scrollRef])
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    update()
+    el.addEventListener("scroll", update)
+    window.addEventListener("resize", update)
+    return () => {
+      el.removeEventListener("scroll", update)
+      window.removeEventListener("resize", update)
+    }
+  }, [scrollRef, update])
+
+  const handleTrackClick = (e: React.MouseEvent) => {
+    const el = scrollRef.current
+    const track = trackRef.current
+    if (!el || !track) return
+    const rect = track.getBoundingClientRect()
+    const clickRatio = (e.clientX - rect.left) / rect.width
+    const maxScroll = el.scrollWidth - el.clientWidth
+    el.scrollTo({ left: clickRatio * maxScroll, behavior: "smooth" })
+  }
+
+  if (thumbWidth >= 100) return null
+
+  return (
+    <div
+      ref={trackRef}
+      className="mx-auto mt-3 h-2 rounded-full bg-foreground/5 cursor-pointer"
+      style={{ width: "76.5%" }}
+      onClick={handleTrackClick}
+    >
+      <div
+        className="h-full rounded-full bg-foreground/15 hover:bg-foreground/25 transition-colors"
+        style={{ width: `${thumbWidth}%`, marginLeft: `${thumbLeft}%` }}
+      />
+    </div>
+  )
+}
+
+export function PortfolioSection() {
+  const coursesScrollRef = useRef<HTMLDivElement>(null)
+  const platformScrollRef = useRef<HTMLDivElement>(null)
+
+  const courses = [
     {
       slug: "agent-mesh-path",
       title: "Agent Mesh Practitioner Path",
@@ -22,7 +80,7 @@ export function PortfolioSection() {
     },
     {
       slug: "EDInt-path",
-      title: "Event-Driven Integration with Solace Platform",
+      title: "Event-Driven Integration with Solace",
       description:
         "Designed and developed a course to teach users how to build event-driven integrations using the Solace platform.",
       image: "/EDInt-path.png",
@@ -58,7 +116,10 @@ export function PortfolioSection() {
         "To be determined"
       ],
       tags: ["Course Design", "In Progress", "Solace Platform"]
-    },
+    }
+  ];
+
+  const platformProjects = [
     {
       slug: "lms-redesign",
       title: "LMS Redesign & Custom Dashboards",
@@ -165,66 +226,79 @@ export function PortfolioSection() {
     }
   ];
 
+  const renderCard = (project: typeof courses[0], index: number) => (
+    <Link key={index} href={`/portfolio/${project.slug}`} className="block shrink-0 w-[350px]">
+      <Card className="overflow-hidden hover:shadow-xl transition-shadow group flex flex-col cursor-pointer pt-0">
+        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+          <img
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}` || `${process.env.NEXT_PUBLIC_BASE_PATH}/placeholder.svg`}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <CardHeader className="pb-0 pt-3 px-4 gap-1">
+          <CardTitle className="text-lg group-hover:text-primary transition-colors leading-tight">
+            {project.title}
+          </CardTitle>
+          <CardDescription className="text-sm line-clamp-2">{project.description}</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-2 px-4 pb-4 pt-0">
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-sm font-semibold">
+              <TrendingUp className="h-3.5 w-3.5 text-primary" />
+              <span>Key Outcomes</span>
+            </div>
+            <ul className="space-y-0.5">
+              {project.outcomes.map((outcome, i) => (
+                <li key={i} className="text-xs text-muted-foreground flex items-start gap-1.5">
+                  <span className="text-primary mt-0.5">•</span>
+                  <span>{outcome}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag, i) => (
+              <Badge key={i} variant="secondary" className="text-xs px-1.5 py-0">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  )
+
   return (
     <ScrollReveal direction="left">
-      <section id="portfolio" className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-12">
-            <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Portfolio & Case Studies</h2>
-              <div className="h-1 w-20 bg-primary rounded-full" />
-              <p className="text-lg text-muted-foreground max-w-2xl">
-                A cross-section of projects spanning e-learning development, platform customization, automation, and digital learning strategy
-              </p>
-            </div>
-
-            {/* Responsive grid: 1 / 2 / 3 columns */}
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project, index) => (
-                <Link key={index} href={`/portfolio/${project.slug}`} className="block h-full">
-                  <Card className="overflow-hidden hover:shadow-xl transition-shadow group h-full flex flex-col cursor-pointer">
-                    <div className="relative aspect-video overflow-hidden bg-muted">
-                      <img
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/${project.image}` || `${process.env.NEXT_PUBLIC_BASE_PATH}/placeholder.svg`}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-base">{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4 mt-auto">
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-sm font-semibold">
-                          <TrendingUp className="h-4 w-4 text-primary" />
-                          <span>Key Outcomes</span>
-                        </div>
-                        <ul className="space-y-1">
-                          {project.outcomes.map((outcome, i) => (
-                            <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                              <span className="text-primary mt-1">•</span>
-                              <span>{outcome}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, i) => (
-                          <Badge key={i} variant="secondary">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
+      <section id="portfolio" className="py-24 bg-muted/30 overflow-x-clip">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Portfolio & Case Studies</h2>
+            <div className="h-1 w-20 bg-primary rounded-full" />
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              A cross-section of projects spanning e-learning development, platform customization, automation, and digital learning strategy
+            </p>
           </div>
+
+          <h3 className="text-2xl font-semibold tracking-tight">Courses</h3>
         </div>
+        <div ref={coursesScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll">
+          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+          {courses.map(renderCard)}
+          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+        </div>
+        <CustomScrollbar scrollRef={coursesScrollRef} />
+
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mt-8">
+          <h3 className="text-2xl font-semibold tracking-tight">Platform & Tools</h3>
+        </div>
+        <div ref={platformScrollRef} className="flex gap-6 overflow-x-auto pb-4 mt-4 portfolio-scroll">
+          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+          {platformProjects.map(renderCard)}
+          <div className="shrink-0 w-[max(0.5rem,calc((100vw-72rem)/2+1rem-1.5rem))]" />
+        </div>
+        <CustomScrollbar scrollRef={platformScrollRef} />
       </section>
     </ScrollReveal>
   )

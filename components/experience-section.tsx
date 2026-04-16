@@ -24,7 +24,7 @@ export function ExperienceSection() {
       skills: ["Docebo", "Boomi", "AI/ML", "Instructional Design", "Project Management"],
     },
     {
-      title: "Technical Curriculum Developer",
+      title: "Learning Technology Lead",
       company: "Solace",
       location: "Kanata, ON",
       period: "2024 – Present",

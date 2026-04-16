@@ -7,12 +7,12 @@ export function AboutSection() {
     {
       icon: Award,
       title: "Technical Expertise",
-      description: "Expert in LMS administration, integrations, and automation",
+      description: "LMS administration, integrations, and automation",
     },
     {
       icon: Zap,
       title: "Platform Innovation",
-      description: "Driving adoption of AI-driven learning tools and UX improvements",
+      description: "Improving platforms and building features that drive adoption",
     },
     {
       icon: Users,
@@ -23,8 +23,8 @@ export function AboutSection() {
 
   return (
     <ScrollReveal direction="right">
-      <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl bg-background">
+      <section id="about" className="py-14 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="container mx-auto max-w-6xl">
           <div className="space-y-12">
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">About Me</h2>
@@ -34,13 +34,13 @@ export function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I’m a Learning Technology professional with expertise in building and managing scalable learning platforms.
-                  My work sits at the intersection of instructional design, technical implementation, and strategic problem-solving.
+                  I build and manage learning platforms, blending instructional design, technical implementation,
+                  and problem-solving to support learning in enterprise environments.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  With hands-on experience in LMS administration, multi-platform systems integration, and custom
-                  e-learning development, I've helped organizations transform their learning ecosystems through
-                  automation, AI-powered tools, and data-driven decision making.
+                  I have hands-on experience in LMS administration, multi-platform integration, and custom
+                  e-learning development. I’ve helped organizations improve how they deliver learning
+                  through automation, AI tools, and better use of their data.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I design learning environments that are engaging, effective, and built to scale.

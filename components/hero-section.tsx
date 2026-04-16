@@ -23,7 +23,7 @@ export function HeroSection() {
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
                   {/*Learning Technology Lead*/}
-                  Technical Curriculum Developer
+                  Learning<br />Technology<br />Lead
                 </h1>
                 <div className="flex items-center gap-3 text-xl sm:text-2xl text-muted-foreground text-pretty">
                   <button

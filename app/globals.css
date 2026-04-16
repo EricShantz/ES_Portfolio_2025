@@ -177,4 +177,12 @@
   .animate-float-slow {
     animation: float-slow 30s ease-in-out infinite;
   }
+
+  .portfolio-scroll {
+    scrollbar-width: none;
+  }
+
+  .portfolio-scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
